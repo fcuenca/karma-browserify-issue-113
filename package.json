@@ -15,6 +15,7 @@
     "jshamcrest": "^0.7.0",
     "jshint": "^2.5.2",
     "karma": "^0.12.19",
+    "karma-browserify": "^4.0.0",
     "karma-commonjs": "0.0.13",
     "karma-expect": "^1.1.0",
     "karma-jsmockito-jshamcrest": "0.0.6",
