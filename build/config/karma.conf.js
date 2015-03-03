@@ -11,12 +11,12 @@
 
 
 	    // frameworks to use
-	    frameworks: ['mocha', 'expect', 'jsmockito-jshamcrest', 'commonjs'],
+	    frameworks: ['mocha', 'expect', 'jsmockito-jshamcrest', 'browserify'],
 
 
 	    // list of files / patterns to load in the browser
 	    files: [
-	      'src/client/**/*.js', 'tests/client/*.js'
+	      'tests/client/*.js'
 	    ],
 
 
@@ -29,10 +29,12 @@
 	    // preprocess matching files before serving them to the browser
 	    // available preprocessors: https://npmjs.org/browse/keyword/karma-preprocessor
 	    preprocessors: {
-		    'src/client/**/*.js': ['commonjs'],
-            'tests/client/**/*.js': ['commonjs']
+            'tests/client/**/*.js': ['browserify']
 	    },
 
+          browserify: {
+              debug: true,                  //Generates source maps
+          },
 
 	    // test results reporter to use
 	    // possible values: 'dots', 'progress', 'junit', 'growl', 'coverage'
@@ -49,7 +51,7 @@
 
 	    // level of logging
 	    // possible values: config.LOG_DISABLE || config.LOG_ERROR || config.LOG_WARN || config.LOG_INFO || config.LOG_DEBUG
-	    logLevel: config.LOG_INFO,
+	    logLevel: config.LOG_DEBUG,
 
 
 	    // enable / disable watching file and executing tests whenever any file changes
